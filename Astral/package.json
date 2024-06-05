@@ -10,8 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.9.2",
     "@astrojs/check": "^0.7.0",
+    "astro": "^4.9.2",
+    "postcss": "^8.4.38",
+    "postcss-preset-env": "^9.5.14",
     "typescript": "^5.4.5"
   }
 }
