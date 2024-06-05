@@ -1,6 +1,8 @@
 ---
 import Head from "./Head.astro"
+import Footer from "../components/Footer.astro"
 import "../styles/global.css"
+import Nav from "../components/Nav.astro";
 
 interface Props{
   title?: string;
@@ -15,8 +17,10 @@ const {
 
 <html lang="en">
   <Head {title} {description} />
-
+  <Nav/>
   <body>
     <slot> Default Txet </slot>
   </body>
+  
+  <Footer />
 </html>

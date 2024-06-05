@@ -2,6 +2,9 @@
   "name": "astral",
   "type": "module",
   "version": "0.0.1",
+  "browerslist": [
+    "defaults"
+  ],
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -12,6 +15,7 @@
   "dependencies": {
     "@astrojs/check": "^0.7.0",
     "astro": "^4.9.2",
+    "astro-icon": "^1.1.0",
     "postcss": "^8.4.38",
     "postcss-preset-env": "^9.5.14",
     "typescript": "^5.4.5"
