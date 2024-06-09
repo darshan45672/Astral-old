@@ -1,10 +1,16 @@
 ---
+import Link from "../components/Link.astro";
 import App from "../layout/App.astro";
 
 const name = "astro";
 ---
 <App title="About" description="This is the about page">
-    <p>
-        hi from  {name}
-    </p>
+    <section class="container about" aria-label="About me">
+        <img src="/images/headshot.png" alt="my photo" width={200} height={330} />
+        <div class="content">
+            <h1 class="h1">About me</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet eius voluptatum laborum voluptatibus dolore nostrum placeat, corrupti alias magni. Fugiat minima similique quos animi placeat reprehenderit rerum sunt, magni impedit.</p>
+            <Link href="mailto: drshnbhandary@gmail.com" style="primary" text="Contact Me"/>
+        </div>
+    </section>
 </App>
