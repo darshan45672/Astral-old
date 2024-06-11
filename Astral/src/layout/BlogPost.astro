@@ -1,4 +1,5 @@
 ---
+import PostHeader from "../components/PostHeader.astro";
 import App from "./App.astro";
 
 const {frontmatter} = Astro.props;
@@ -6,20 +7,9 @@ const {frontmatter} = Astro.props;
 
 const {title, description, date, category, author, image} = frontmatter;
 
-
 ---
 <App {title} {description}>
- <header>
-  <div class="container">
-    <small>
-      <a href={`/category/${category}`} class="badge">{category}</a>
-    </small>
-    <h1 class="h2">{title}</h1>
-    <p>by <a href={`/author/${author}`}>{author}</a>
-    {date}</p>
-  </div>
-  <img src="" alt="">
- </header>
+  <PostHeader {title} {date} {category} {author} {image} {description} />
  <div class="post-content">
   <div class="content">
     <slot/>
