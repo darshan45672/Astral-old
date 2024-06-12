@@ -1,0 +1,22 @@
+---
+import { slugify, formatDate } from "../js/utils"; 
+import Image from "astro/components/Image.astro";
+
+const {post } = Astro.props;
+const {author, category, date, image, title} = post.frontmatter;
+---
+
+<pre>{JSON.stringify(post.frontmatter, null, 2)}</pre>
+
+<article class="card">
+      <small>
+        <a href={`/category/${slugify(category)}`} class="badge">{category}</a>
+      </small>
+      <a href=""></a>
+      <h1 class="h2">{title}</h1>
+      <p>
+        by <a href={`/author/${slugify(author)}`}>{author}</a>
+        {formatDate(date)}
+      </p>
+  </article>
+  
