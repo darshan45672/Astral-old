@@ -8,7 +8,7 @@ const allPosts = await Astro.glob("./*.md");
 <App title="Home" description="This is the home page of my blogging app">
     {
         allPosts.map((post) => (
-           <PostCard {post} />
+           <PostCard frontmatter={post.frontmatter} url={post.url} tagType="h2" />
         ))
     }
 </App>
