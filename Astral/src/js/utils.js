@@ -7,6 +7,7 @@ export function slugify(text) {
       .replace(/--+/g, '-')
       .replace(/^-+/, '')
       .replace(/-+$/, '');
+      
   }
   
   export function formatDate(date) {

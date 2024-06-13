@@ -2,7 +2,7 @@
 layout: "../../layout/BlogPost.astro"
 title: A Post about Important Items Of Life
 date: 2022-11-20
-author: Darnell McClure
+author: Darshan Bhandary
 image: {
   src: "/images/post-1.jpg",
   alt: "A picture of a coder",
