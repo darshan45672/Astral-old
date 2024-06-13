@@ -1,7 +1,7 @@
 ---
 layout: "../../layout/BlogPost.astro"
 title: A Post about Important Items Of Life
-date: 2022-11-20
+date: 2023-11-20
 author: Darshan Bhandary
 image: {
   src: "/images/post-1.jpg",
