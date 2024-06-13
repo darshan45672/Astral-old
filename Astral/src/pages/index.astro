@@ -1,7 +1,32 @@
 ---
+import PostCard from "../components/PostCard.astro";
 import App from "../layout/App.astro";
+import { formatBlogPosts } from "../js/utils";
+import Link from "../components/Link.astro";
 
+const allPosts = await Astro.glob("./blog/*.md");
+// console.log(allPosts);
+const formattedPosts = formatBlogPosts(allPosts,{
+    limit: 3,
+});
 ---
 <App title="Home" description="This is the home page of my blogging app">
-    <h1>My Blog Page</h1>
+    <section class="container about" aria-label="About me">
+        <img src="/images/headshot.png" alt="my photo" width={200} height={330} />
+        <div class="content">
+            <h1 class="h1">About me</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet eius voluptatum laborum voluptatibus dolore nostrum placeat, corrupti alias magni. Fugiat minima similique quos animi placeat reprehenderit rerum sunt, magni impedit.</p>
+            <Link href="/about" style="secondary" text="👋 About me"/>
+        </div>
+    </section>
+    <section class="container" aria-label="New Blog Posts">
+        <h2 class="h1"> New Blog Posts</h2>
+        <div class="post-container">
+            {
+                formattedPosts.map((post) => (
+                   <PostCard frontmatter={post.frontmatter} url={post.url} tagType="h3" />
+                ))
+            }
+        </div>
+    </section>
 </App>
