@@ -25,13 +25,13 @@ console.log(page);
     <h1 class="h1">New Blog Posts</h1>
     <div class="post-container">
       {
-        // formattedPosts.map((post) => (
-        //   <PostCard
-        //     frontmatter={post.frontmatter}
-        //     url={post.url}
-        //     tagType="h2"
-        //   />
-        // ))
+        page.data.map((post) => (
+          <PostCard
+            frontmatter={post.frontmatter}
+            url={post.url}
+            tagType="h2"
+          />
+        ))
       }
     </div>
   </section>
