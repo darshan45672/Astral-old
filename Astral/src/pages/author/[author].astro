@@ -7,7 +7,9 @@ export async function getStaticPaths() {
   const allPosts = await Astro.glob("../blog/*.md");
   // console.log(allPosts);
   const formattedPosts = formatBlogPosts(allPosts);
-  console.log(formattedPosts);
+  // console.log(formattedPosts);
+  // console.log(`type of ${typeof formattedPosts}`);
+  
   const allAuthors = [
     ...new Set(formattedPosts.map((post) => post.frontmatter.author).flat()),
   ];
