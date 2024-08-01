@@ -1,5 +1,5 @@
 ---
-layout: "../../layout/BlogPost.astro"
+layout: "../../layouts/BlogPostLayout.astro"
 title: Beginning with CSS
 date: 2022-12-03
 author: Darnell McClure

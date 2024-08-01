@@ -1,18 +1,31 @@
 ---
+// component imports
 import Link from "../components/Link.astro";
-import App from "../layout/App.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
-<App title="Page Not Found" description="404 error">
-    <section class="container" style={{ 
-        display: "grid",
-        placeItems: "center",
-        textAlign: "center",
-        gap: "var(--space-sm)",
-     }}>
-        <div>
-            <h1 class="h1">Ayyo Page elle baava!!!</h1>
-            <p>we seem to have misplaced something! </p>
-        </div>
-        <Link href="/" style="secondary" text="Go Home" />
-    </section>
-</App>
+
+<MainLayout title="Page Not Found">
+  <div
+    class="container"
+    style={{
+      display: "grid",
+      placeItems: "center",
+      textAlign: "center",
+      gap: "var(--space-sm)",
+    }}
+  >
+    <div>
+      <h1 class="h1">Welp, this is awkward!</h1>
+      <p>We seem to have misplaced something…</p>
+    </div>
+    <Link
+      href="/"
+      style="secondary"
+      text="Go Home"
+      icon={{
+        name: "tabler:home",
+        side: "right",
+      }}
+    />
+  </div>
+</MainLayout>

@@ -1,9 +1,7 @@
-// console.log('nav.js loaded');
-const nav = document.querySelectorAll("[data-navLink]");
+const navLinks = document.querySelectorAll("[data-navLink]");
 
-nav.forEach((navLink) => {
-    // console.log(window.location.pathname);
-    if (navLink.getAttribute("href") === window.location.pathname) {
-        navLink.setAttribute("aria-current", "page")
-    }
-});
+navLinks.forEach((link) => {
+  if (link.getAttribute("href") === window.location.pathname) {
+    link.setAttribute("aria-current", "page");
+  }
+})
