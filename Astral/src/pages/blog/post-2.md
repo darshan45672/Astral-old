@@ -1,5 +1,5 @@
 ---
-layout: "../../layout/BlogPost.astro"
+layout: "../../layouts/BlogPostLayout.astro"
 title: Running out of sample post ideas
 date: 2022-11-25
 author: Victoria Greenfelder
